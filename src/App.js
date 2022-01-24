@@ -5,6 +5,9 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Navbar from "./components/Navbar";
 import Joinus from "./components/Joinus";
 import Roadmap from "./components/Roadmap";
@@ -16,12 +19,30 @@ const truncate = (input, len) =>
 export const StyledButton = styled.button`
   width: 150px;
   padding: 15px 0;
+  margin: 20px 0;
+  border-radius: 15px;
+  border: none; 
+  background-color: #03C4A1;
+  color: white;
+
+  :hover{
+    cursor: pointer;
+    background-color: #007880;
+  }
 `;
 
 export const StyledRoundButton = styled.button`
   width: 50px;
   padding: 8px 0;
-  
+  border-radius: 15px;
+  border: none; 
+  background-color: #03C4A1;
+  color: white;
+
+  :hover{
+    cursor: pointer;
+    background-color: #007880;
+  }
 `;
 
 export const ResponsiveWrapper = styled.div``;
@@ -135,9 +156,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <s.Screen id="mints">
+      <s.Screen id="mints" >
         <div className="left_image">
-          <img src="/images/1.png"></img>
+          <img src="/images/brand/logo.png"></img>
         </div>
         <s.Container
           flex={1}
@@ -150,7 +171,7 @@ function App() {
           <s.SpacerSmall />
           <ResponsiveWrapper flex={1} style={{ padding: 10 }} test>
             <s.Container flex={2} jc={"center"} ai={"center"}>
-              <s.TextTitle style={{ fontSize: "3rem", marginBottom: "30px", color: "tomato" }}>
+              <s.TextTitle style={{ fontSize: "5rem", marginBottom: "30px", color: "tomato" }}>
                 {data.totalSupply} / {CONFIG.MAX_SUPPLY}
               </s.TextTitle>
               <s.TextDescription style={{ fontSize: "1.7rem", }}>
@@ -268,7 +289,7 @@ function App() {
           </ResponsiveWrapper>
           <s.SpacerMedium />
           <s.Container jc={"center"} ai={"center"} style={{ width: "100%" }}>
-            <s.TextDescription>
+            <s.TextDescription style={{ textAlign: "center"}}>
               Please make sure you are connected to the right network (
               {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please
               note: Once you make the purchase, you cannot undo this action.

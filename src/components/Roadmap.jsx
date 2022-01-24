@@ -1,13 +1,105 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Roadmap = () => {
-    return (
-        <div style={{height: "100vh", width: "100vw", textAlign: "center"}} id='roadmap'>
-            <h1>
-                Roadmap
-            </h1>
-        </div>
-    )
-}
+  return (
+    <Roadmaps id="roadmap">
+      <VisMis>
+        <Vision>
+          <h2>Vision</h2>
+          <div>
+            <img
+              src="/images/brand/logo.png"
+              style={{ marginRight: "20px" }}
+            ></img>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto
+              <br />
+              temporibus culpa praesentium velit dignissimos doloremque.
+            </p>
+          </div>
+        </Vision>
 
-export default Roadmap
+        <Mission>
+          <h2>Mission</h2>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto
+              <br />
+              temporibus culpa praesentium velit dignissimos doloremque.
+            </p>
+            <img
+              src="/images/brand/logo.png"
+              style={{ marginLeft: "20px" }}
+            ></img>
+          </div>
+        </Mission>
+      </VisMis>
+      <Map>
+        {/* <h1>ROADMAP</h1>
+        <img src="/images/1.png"></img> */}
+        <h1>image of Roadmap</h1>
+      </Map>
+    </Roadmaps>
+  );
+};
+
+const Roadmaps = styled.div`
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #041c32;
+  color: white;
+`;
+
+const VisMis = styled.div`
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  h2 {
+    font-size: 2.5rem;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+`;
+
+const Vision = styled.div`
+  div {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+const Mission = styled.div`
+  div {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+const Map = styled.div`
+  flex-basis: 50%;  
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+  img {
+    height: 725px;
+    width: 725px;
+  }
+`;
+export default Roadmap;
