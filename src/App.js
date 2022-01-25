@@ -317,7 +317,7 @@ function App() {
           <s.Container
             jc={"center"}
             ai={"center"}
-            style={{ padding: "0 15px 30px 0" }}
+            style={{ paddingBottom: "30px", width: "80%" }}
           >
             <s.TextDescription style={{ textAlign: "center" }}>
               Please make sure you are connected to the right network (

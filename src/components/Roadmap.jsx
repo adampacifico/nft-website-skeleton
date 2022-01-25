@@ -5,7 +5,7 @@ const Roadmap = () => {
   return (
     <Roadmaps id="roadmap">
       <VisMis>
-        <Vision data-aos="fade-left">
+        <Vision data-aos="flip-left">
           <h2>Vision</h2>
           <div>
             <img src="/images/238.png" style={{ marginRight: "20px" }}></img>
@@ -17,7 +17,7 @@ const Roadmap = () => {
           </div>
         </Vision>
 
-        <Mission data-aos="fade-right">
+        <Mission data-aos="flip-right">
           <h2>Mission</h2>
           <div>
             <p>

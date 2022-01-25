@@ -31,10 +31,10 @@ const Navbar = () => {
   return (
     <Main>
       <Navi>
-        <Logo data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <Logo data-aos="zoom-out">
           <img src="/images/brand/tans.png"></img>
         </Logo >
-        <NavList className={`${isClick ? "show" : "none"}`} data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <NavList className={`${isClick ? "show" : "none"}`} onClick={() => setIsClick(false)}>
           {/* <Nav>HOME</Nav> */}
           <Nav onClick={() => setIsClick(false)} href="#mints">
             MINT
@@ -50,15 +50,15 @@ const Navbar = () => {
           </Nav>
         </NavList>
         <Menu>
-          {!isClick ? (
+          {/* {!isClick ? ( */}
             <GiHamburgerMenu onClick={() => setIsClick(!isClick)} />
-          ) : (
-            <IoCloseSharp onClick={() => setIsClick(!isClick)} />
-          )}
+          {/* ) : ( */}
+            {/* <IoCloseSharp onClick={() => setIsClick(!isClick)} /> */}
+          {/* )} */}
         </Menu>
       </Navi>
-      <Banner data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <h1>Welcome to our NFT Project!</h1>
+      <Banner data-aos="zoom-out">
+        <h1 >Welcome to our NFT Project!</h1>
         <h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
           necessitatibus!
@@ -95,7 +95,6 @@ const Menu = styled.div`
   color: white;
   font-size: 1.7rem;
   display: none;
-  z-index: 5;
 
   @media (max-width: 425px) {
     display: block;
@@ -122,9 +121,11 @@ const Navi = styled.nav`
       position: fixed;
       flex-direction: column;
       inset: 0;
+      width: 100%;
       justify-content: space-evenly;
       background-color: rgba(1, 1, 1, 0.9);
-      z-index: 2;
+      z-index: 4;
+      /* opacity: 1 !important; */
     }
     a{
       padding: 0;

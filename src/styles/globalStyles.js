@@ -3,6 +3,7 @@ import styled from "styled-components";
 // Used for wrapping a page component
 export const Screen = styled.div`
   height: 100vh;
+  /* height: auto; */
   background: #dbcbbd;
   width: 100vw;
   display: flex;
@@ -53,7 +54,6 @@ export const SpacerLarge = styled.div``;
 
 // Used for providing a wrapper around a component
 export const Container = styled.div`
- 
   display: flex;
   justify-content: center;
   flex-direction: column;
