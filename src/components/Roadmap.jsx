@@ -9,7 +9,7 @@ const Roadmap = () => {
           <h2>Vision</h2>
           <div>
             <img
-              src="/images/brand/logo.png"
+              src="/images/238.png"
               style={{ marginRight: "20px" }}
             ></img>
             <p>
@@ -31,7 +31,7 @@ const Roadmap = () => {
               temporibus culpa praesentium velit dignissimos doloremque.
             </p>
             <img
-              src="/images/brand/logo.png"
+              src="/images/242.png"
               style={{ marginLeft: "20px" }}
             ></img>
           </div>
@@ -55,6 +55,10 @@ const Roadmaps = styled.div`
   align-items: center;
   background-color: #041c32;
   color: white;
+  @media (max-width: 820px) {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 `;
 
 const VisMis = styled.div`
@@ -92,7 +96,7 @@ const Mission = styled.div`
 `;
 
 const Map = styled.div`
-  flex-basis: 50%;  
+  flex-basis: 50%;
   border: 1px solid white;
   height: 100%;
   width: 100%;

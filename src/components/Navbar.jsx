@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
+  const [isClick, setIsClick] = useState(false);
+
+  // const Sidenav = () => <div>
+
+  // </div>;
   var settings = {
     infinite: true,
     slidesToShow: 6,
@@ -12,6 +19,14 @@ const Navbar = () => {
     prevArrow: false,
     nextArrow: false,
     lazyLoaded: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
   return (
     <Main>
@@ -19,13 +34,28 @@ const Navbar = () => {
         <Logo>
           <img src="/images/brand/tans.png"></img>
         </Logo>
-        <NavList>
-          <Nav>HOME</Nav>
-          <Nav href="#mints">MINT</Nav>
-          <Nav href="#roadmap">ROADMAP</Nav>
-          <Nav href="#team">TEAM</Nav>
-          <Nav href="#joinus">JOIN US</Nav>
+        <NavList className={`${isClick ? "show" : "none"}`}>
+          {/* <Nav>HOME</Nav> */}
+          <Nav onClick={() => setIsClick(!isClick)} href="#mints">
+            MINT
+          </Nav>
+          <Nav onClick={() => setIsClick(!isClick)} href="#roadmap">
+            ROADMAP
+          </Nav>
+          <Nav onClick={() => setIsClick(!isClick)} href="#team">
+            TEAM
+          </Nav>
+          <Nav onClick={() => setIsClick(!isClick)} href="#joinus">
+            JOIN US
+          </Nav>
         </NavList>
+        <Menu>
+          {isClick ? (
+            <GiHamburgerMenu onClick={() => setIsClick(!isClick)} />
+          ) : (
+            <IoCloseSharp onClick={() => setIsClick(!isClick)} />
+          )}
+        </Menu>
       </Navi>
       <Banner>
         <h1>Welcome to our NFT Project!</h1>
@@ -59,6 +89,16 @@ const Main = styled.div`
   background: #041c32;
   color: white;
 `;
+const Menu = styled.div`
+  color: white;
+  font-size: 1.7rem;
+  display: none;
+  z-index: 5;
+
+  @media (max-width: 425px) {
+    display: block;
+  }
+`;
 const Navi = styled.nav`
   width: 100%;
   height: 150px;
@@ -68,6 +108,23 @@ const Navi = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 425px) {
+    justify-content: space-between;
+    padding-right: 50px;
+
+    .none {
+      display: none !important;
+    }
+    .show {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      inset: 0;
+      justify-content: space-around;
+      background-color: rgba(1, 1, 1, 0.9);
+      z-index: 2;
+    }
+  }
 `;
 const Logo = styled.a`
   img {
@@ -79,6 +136,12 @@ const NavList = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 425px) {
+    a {
+      font-size: 2rem;
+    }
+  }
 `;
 const Nav = styled.a`
   padding-right: 30px;
@@ -86,6 +149,7 @@ const Nav = styled.a`
   font-size: 1.2rem;
   color: white;
   :hover {
+    text-decoration: none;
     color: #ecb365;
     cursor: pointer;
   }
@@ -97,12 +161,17 @@ const Banner = styled.div`
   align-items: center;
   flex-direction: column;
   h1 {
-    font-size: 5rem;
-    color: darkbrown;
+    font-size: 3.5rem;
+    /* color: darkbrown; */
     margin-bottom: 10px;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+  @media (max-width: 820px) {
+    h2 {
+      font-size: 1.2rem;
+    }
   }
 `;
 export default Navbar;

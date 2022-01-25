@@ -169,7 +169,7 @@ function App() {
         LINK TO OPENSEA
         </a> */}
           <s.SpacerSmall />
-          <ResponsiveWrapper flex={1} style={{ padding: 10 }} test>
+          <ResponsiveWrapper flex={1} style={{  width: "100%", padding: 10 }} test>
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextTitle style={{ fontSize: "5rem", marginBottom: "30px", color: "tomato" }}>
                 {data.totalSupply} / {CONFIG.MAX_SUPPLY}
@@ -245,7 +245,7 @@ function App() {
                     <>
                       <s.TextDescription>{feedback}</s.TextDescription>
                       <s.SpacerMedium />
-                      <s.Container style={{ display: "flex", justifyContent: "space-around", flexDirection: "row"}} ai={"center"} jc={"center"} fd={"row"}>
+                      <s.Container style={{ display: "flex", width: "70%", justifyContent: "space-around", flexDirection: "row"}} ai={"center"} jc={"center"} fd={"row"}>
                         <StyledRoundButton
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
@@ -288,7 +288,7 @@ function App() {
             <s.SpacerLarge />
           </ResponsiveWrapper>
           <s.SpacerMedium />
-          <s.Container jc={"center"} ai={"center"} style={{ width: "100%" }}>
+          <s.Container jc={"center"} ai={"center"} style={{ padding:"0 15px" }}>
             <s.TextDescription style={{ textAlign: "center"}}>
               Please make sure you are connected to the right network (
               {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please
