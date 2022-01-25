@@ -31,56 +31,58 @@ const Navbar = () => {
   return (
     <Main>
       <Navi>
-        <Logo>
+        <Logo data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
           <img src="/images/brand/tans.png"></img>
-        </Logo>
-        <NavList className={`${isClick ? "show" : "none"}`}>
+        </Logo >
+        <NavList className={`${isClick ? "show" : "none"}`} data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
           {/* <Nav>HOME</Nav> */}
-          <Nav onClick={() => setIsClick(!isClick)} href="#mints">
+          <Nav onClick={() => setIsClick(false)} href="#mints">
             MINT
           </Nav>
-          <Nav onClick={() => setIsClick(!isClick)} href="#roadmap">
+          <Nav onClick={() => setIsClick(false)} href="#roadmap">
             ROADMAP
           </Nav>
-          <Nav onClick={() => setIsClick(!isClick)} href="#team">
+          <Nav onClick={() => setIsClick(false)} href="#team">
             TEAM
           </Nav>
-          <Nav onClick={() => setIsClick(!isClick)} href="#joinus">
+          <Nav onClick={() => setIsClick(false)} href="#joinus">
             JOIN US
           </Nav>
         </NavList>
         <Menu>
-          {isClick ? (
+          {!isClick ? (
             <GiHamburgerMenu onClick={() => setIsClick(!isClick)} />
           ) : (
             <IoCloseSharp onClick={() => setIsClick(!isClick)} />
           )}
         </Menu>
       </Navi>
-      <Banner>
+      <Banner data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <h1>Welcome to our NFT Project!</h1>
         <h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
           necessitatibus!
         </h2>
       </Banner>
-      <Slider {...settings}>
-        <img src="/images/3.png"></img>
-        <img src="/images/6.png"></img>
-        <img src="/images/3.png"></img>
-        <img src="/images/18.png"></img>
-        <img src="/images/48.png"></img>
-        <img src="/images/50.png"></img>
-        <img src="/images/64.png"></img>
-        <img src="/images/69.png"></img>
-        <img src="/images/91.png"></img>
-        <img src="/images/104.png"></img>
-        <img src="/images/174.png"></img>
-        <img src="/images/182.png"></img>
-        <img src="/images/203.png"></img>
-        <img src="/images/230.png"></img>
-        <img src="/images/238.png"></img>
-      </Slider>
+      <div style={{ overflow: "hidden" }} data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <Slider {...settings}>
+          <img src="/images/3.png"></img>
+          <img src="/images/6.png"></img>
+          <img src="/images/3.png"></img>
+          <img src="/images/18.png"></img>
+          <img src="/images/48.png"></img>
+          <img src="/images/50.png"></img>
+          <img src="/images/64.png"></img>
+          <img src="/images/69.png"></img>
+          <img src="/images/91.png"></img>
+          <img src="/images/104.png"></img>
+          <img src="/images/174.png"></img>
+          <img src="/images/182.png"></img>
+          <img src="/images/203.png"></img>
+          <img src="/images/230.png"></img>
+          <img src="/images/238.png"></img>
+        </Slider>
+      </div>
     </Main>
   );
 };
@@ -120,9 +122,12 @@ const Navi = styled.nav`
       position: fixed;
       flex-direction: column;
       inset: 0;
-      justify-content: space-around;
+      justify-content: space-evenly;
       background-color: rgba(1, 1, 1, 0.9);
       z-index: 2;
+    }
+    a{
+      padding: 0;
     }
   }
 `;
@@ -171,6 +176,11 @@ const Banner = styled.div`
   @media (max-width: 820px) {
     h2 {
       font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 425px) {
+    h2,h1 {
+      text-align: center;
     }
   }
 `;

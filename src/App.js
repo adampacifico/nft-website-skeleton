@@ -13,6 +13,9 @@ import Joinus from "./components/Joinus";
 import Roadmap from "./components/Roadmap";
 import Team from "./components/Team";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
@@ -21,11 +24,11 @@ export const StyledButton = styled.button`
   padding: 15px 0;
   margin: 20px 0;
   border-radius: 15px;
-  border: none; 
-  background-color: #03C4A1;
+  border: none;
+  background-color: #03c4a1;
   color: white;
 
-  :hover{
+  :hover {
     cursor: pointer;
     background-color: #007880;
   }
@@ -35,11 +38,11 @@ export const StyledRoundButton = styled.button`
   width: 50px;
   padding: 8px 0;
   border-radius: 15px;
-  border: none; 
-  background-color: #03C4A1;
+  border: none;
+  background-color: #03c4a1;
   color: white;
 
-  :hover{
+  :hover {
     cursor: pointer;
     background-color: #007880;
   }
@@ -51,8 +54,7 @@ export const StyledLogo = styled.img``;
 
 export const StyledImg = styled.img``;
 
-export const StyledLink = styled.a`
-`;
+export const StyledLink = styled.a``;
 
 function App() {
   const dispatch = useDispatch();
@@ -151,16 +153,18 @@ function App() {
 
   useEffect(() => {
     getData();
+    AOS.init();
   }, [blockchain.account]);
 
   return (
     <>
       <Navbar />
-      <s.Screen id="mints" >
-        <div className="left_image">
+      <s.Screen id="mints">
+        <div data-aos="flip-right" className="left_image">
           <img src="/images/brand/logo.png"></img>
         </div>
         <s.Container
+          data-aos="flip-left"
           flex={1}
           ai={"center"}
           image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
@@ -169,12 +173,22 @@ function App() {
         LINK TO OPENSEA
         </a> */}
           <s.SpacerSmall />
-          <ResponsiveWrapper flex={1} style={{  width: "100%", padding: 10 }} test>
+          <ResponsiveWrapper
+            flex={1}
+            style={{ width: "100%", padding: 10 }}
+            test
+          >
             <s.Container flex={2} jc={"center"} ai={"center"}>
-              <s.TextTitle style={{ fontSize: "5rem", marginBottom: "30px", color: "tomato" }}>
+              <s.TextTitle
+                style={{
+                  fontSize: "5rem",
+                  marginBottom: "30px",
+                  color: "tomato",
+                }}
+              >
                 {data.totalSupply} / {CONFIG.MAX_SUPPLY}
               </s.TextTitle>
-              <s.TextDescription style={{ fontSize: "1.7rem", }}>
+              <s.TextDescription style={{ fontSize: "1.7rem" }}>
                 <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
                   {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
                 </StyledLink>
@@ -245,14 +259,26 @@ function App() {
                     <>
                       <s.TextDescription>{feedback}</s.TextDescription>
                       <s.SpacerMedium />
-                      <s.Container style={{ display: "flex", width: "70%", justifyContent: "space-around", flexDirection: "row"}} ai={"center"} jc={"center"} fd={"row"}>
+                      <s.Container
+                        style={{
+                          display: "flex",
+                          width: "70%",
+                          justifyContent: "space-around",
+                          flexDirection: "row",
+                        }}
+                        ai={"center"}
+                        jc={"center"}
+                        fd={"row"}
+                      >
                         <StyledRoundButton
-                            disabled={claimingNft ? 1 : 0}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              decrementMintAmount();
-                            }}
-                        >-</StyledRoundButton>
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            decrementMintAmount();
+                          }}
+                        >
+                          -
+                        </StyledRoundButton>
                         <s.SpacerMedium />
                         <s.TextDescription>{mintAmount}</s.TextDescription>
                         <s.SpacerMedium />
@@ -288,8 +314,12 @@ function App() {
             <s.SpacerLarge />
           </ResponsiveWrapper>
           <s.SpacerMedium />
-          <s.Container jc={"center"} ai={"center"} style={{ padding:"0 15px" }}>
-            <s.TextDescription style={{ textAlign: "center"}}>
+          <s.Container
+            jc={"center"}
+            ai={"center"}
+            style={{ padding: "0 15px 30px 0" }}
+          >
+            <s.TextDescription style={{ textAlign: "center" }}>
               Please make sure you are connected to the right network (
               {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please
               note: Once you make the purchase, you cannot undo this action.
@@ -299,7 +329,7 @@ function App() {
               style={{
                 textAlign: "center",
                 color: "black",
-                marginTop: "10px"
+                marginTop: "10px",
               }}
             >
               We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract
@@ -309,9 +339,9 @@ function App() {
           </s.Container>
         </s.Container>
       </s.Screen>
-      <Roadmap/>
-      <Team id="team"/>
-      <Joinus id="joinus"/>
+      <Roadmap />
+      <Team id="team" />
+      <Joinus id="joinus" />
     </>
   );
 }

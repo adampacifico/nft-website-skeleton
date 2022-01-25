@@ -53,12 +53,15 @@ export const SpacerLarge = styled.div``;
 
 // Used for providing a wrapper around a component
 export const Container = styled.div`
-  width: 100%;
+ 
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-basis: 50%;
+  /* @media(max-width: 425px){
+    padding-bottom: 30px;
+  } */
 `;
 
 export const TextTitle = styled.p``;

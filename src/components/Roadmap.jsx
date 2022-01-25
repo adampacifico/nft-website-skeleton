@@ -5,35 +5,27 @@ const Roadmap = () => {
   return (
     <Roadmaps id="roadmap">
       <VisMis>
-        <Vision>
+        <Vision data-aos="fade-left">
           <h2>Vision</h2>
           <div>
-            <img
-              src="/images/238.png"
-              style={{ marginRight: "20px" }}
-            ></img>
+            <img src="/images/238.png" style={{ marginRight: "20px" }}></img>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto
-              <br />
-              temporibus culpa praesentium velit dignissimos doloremque.
+              Architecto temporibus culpa praesentium velit dignissimos
+              doloremque.
             </p>
           </div>
         </Vision>
 
-        <Mission>
+        <Mission data-aos="fade-right">
           <h2>Mission</h2>
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto
-              <br />
-              temporibus culpa praesentium velit dignissimos doloremque.
+              Architecto temporibus culpa praesentium velit dignissimos
+              doloremque.
             </p>
-            <img
-              src="/images/242.png"
-              style={{ marginLeft: "20px" }}
-            ></img>
+            <img src="/images/242.png" style={{ marginLeft: "20px" }}></img>
           </div>
         </Mission>
       </VisMis>
@@ -78,6 +70,22 @@ const VisMis = styled.div`
   }
   p {
     font-size: 1.2rem;
+    width: 80%;
+  }
+  @media (max-width: 425px) {
+    img {
+      width: 75px;
+      height: 75px;
+      margin: 0 !important;
+    }
+    p {
+      font-size: 0.7rem;
+      width: 70%;
+      text-align: center;
+    }
+    div {
+      justify-content: center;
+    }
   }
 `;
 
@@ -85,6 +93,7 @@ const Vision = styled.div`
   div {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -92,6 +101,7 @@ const Mission = styled.div`
   div {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 `;
 

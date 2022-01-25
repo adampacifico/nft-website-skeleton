@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = ({ name }) => (
-  <div className="card" style={{ width: "22rem" }}>
+const Card = ({ name, trans, delay }) => (
+  <div className="card" style={{ width: "22rem" }} data-aos={trans} data-aos-delay={delay}>
     <img
       className="card-img-top"
       src="/images/3.png"
       alt="Card image cap"
     ></img>
     <div className="card-body">
-      <p className="card-text">
-        {name}
-      </p>
+      <p className="card-text">{name}</p>
     </div>
   </div>
 );
@@ -25,9 +23,9 @@ const Team = () => {
         explicabo doloribus rerum! Hic optio qui laborum veniam in suscipit!
       </p>
       <Cards>
-        <Card name="Developer"/>
-        <Card name="Artist"/>
-        <Card name="Founder"/>
+        <Card name="Developer" trans="zoom-in-up" delay="50" />
+        <Card name="Artist" trans ="zoom-in-up"   delay="500"/>
+        <Card name="Founder" trans="zoom-in-up"  delay="1000"/>
       </Cards>
     </Teams>
   );
@@ -36,7 +34,7 @@ const Team = () => {
 const Teams = styled.div`
   height: 100vh;
   width: 100vw;
-  background: #DBCBBD;
+  background: #dbcbbd;
   color: black;
   text-align: center;
   display: flex;
@@ -45,11 +43,13 @@ const Teams = styled.div`
   img {
     object-fit: fill;
   }
-  p{
-      margin-bottom: 30px;
+  p {
+    margin-bottom: 30px;
+    padding: 10px;
+
   }
-  h1{
-      font-size: 3rem;
+  h1 {
+    font-size: 3rem;
   }
 `;
 const Cards = styled.div`
