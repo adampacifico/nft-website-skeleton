@@ -3,20 +3,25 @@ import styled from "styled-components";
 // Used for wrapping a page component
 export const Screen = styled.div`
   height: 100vh;
+  color: #ffc793;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
   /* height: auto; */
-  background: #dbcbbd;
+  background: black;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   .left_image {
     display: flex;
     justify-content: center;
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     align-items: center;
+    height: 100%;
     img {
-      height: 500px;
-      width: 500px;
+      height: 400px;
+      width: 400px;
     }
     @media (max-width: 1024px) {
       img {
@@ -25,18 +30,8 @@ export const Screen = styled.div`
       }
     }
   }
-
-  @media (max-width: 820px) {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  @media (max-width: 425px) {
-    .left_image {
-      img {
-        height: 300px;
-        width: 300px;
-      }
-    }
+  @media (max-width: 768px) {
+    height: 100%;
   }
 `;
 
@@ -54,14 +49,27 @@ export const SpacerLarge = styled.div``;
 
 // Used for providing a wrapper around a component
 export const Container = styled.div`
+  width: 400px;
+  height: 400px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  flex-basis: 50%;
-  /* @media(max-width: 425px){
+  justify-content: center;
+  font-weight: bold;
+
+  /* flex-basis: 50%; */
+  /* @media(max-width: 426px){
     padding-bottom: 30px;
   } */
+  .gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TextTitle = styled.p``;

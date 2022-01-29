@@ -36,8 +36,14 @@ const Navbar = () => {
         </Logo >
         <NavList className={`${isClick ? "show" : "none"}`} onClick={() => setIsClick(false)}>
           {/* <Nav>HOME</Nav> */}
+          <Nav onClick={() => setIsClick(false)} href="#">
+            HOME
+          </Nav>
           <Nav onClick={() => setIsClick(false)} href="#mints">
             MINT
+          </Nav>
+          <Nav onClick={() => setIsClick(false)} href="#aboutus">
+            ABOUT US
           </Nav>
           <Nav onClick={() => setIsClick(false)} href="#roadmap">
             ROADMAP
@@ -58,11 +64,9 @@ const Navbar = () => {
         </Menu>
       </Navi>
       <Banner data-aos="zoom-out">
-        <h1 >Welcome to our NFT Project!</h1>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-          necessitatibus!
-        </h2>
+        <h1 >Welcome to paru-paro g</h1>
+        <h2 >international nft</h2>
+
       </Banner>
       <div style={{ overflow: "hidden" }} data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <Slider {...settings}>
@@ -88,28 +92,44 @@ const Navbar = () => {
 };
 
 const Main = styled.div`
-  background: #041c32;
-  color: white;
+  background: black;
+  color: #FFC793;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
 `;
 const Menu = styled.div`
   color: white;
   font-size: 1.7rem;
   display: none;
-
-  @media (max-width: 425px) {
+  
+  @media (max-width: 426px) {
     display: block;
   }
 `;
 const Navi = styled.nav`
   width: 100%;
-  height: 150px;
+  height: 120px;
   padding: 20px;
   color: white;
-  background: #064663;
+  background: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media (max-width: 425px) {
+  position: relative;
+
+  ::after{
+    position: absolute;
+    content: "";
+    bottom:0;
+    right:0;
+    left:0;
+    width: 95%;
+    margin: 0 auto;
+    height: 3px;
+    background: #FFC793;
+  }
+  @media (max-width: 426px) {
     justify-content: space-between;
     padding-right: 50px;
 
@@ -134,8 +154,8 @@ const Navi = styled.nav`
 `;
 const Logo = styled.a`
   img {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
   }
 `;
 const NavList = styled.div`
@@ -143,7 +163,7 @@ const NavList = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
     a {
       font-size: 2rem;
     }
@@ -156,12 +176,17 @@ const Nav = styled.a`
   color: white;
   :hover {
     text-decoration: none;
-    color: #ecb365;
+    color: #FFC793;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+
+    font-size: .7rem;
   }
 `;
 const Banner = styled.div`
-  height: calc(100vh - 410px);
+  height: calc(100vh - 350px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,17 +196,18 @@ const Banner = styled.div`
     /* color: darkbrown; */
     margin-bottom: 10px;
   }
-  h2 {
+  h2{
     font-size: 1.7rem;
   }
   @media (max-width: 820px) {
-    h2 {
-      font-size: 1.2rem;
+    h1 {
+      font-size: 2rem;
     }
   }
-  @media (max-width: 425px) {
-    h2,h1 {
+  @media (max-width: 426px) {
+    h1 {
       text-align: center;
+      font-size: 2.2rem;
     }
   }
 `;

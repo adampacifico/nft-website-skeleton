@@ -44,7 +44,7 @@ const MainDiv = styled.div`
     height: 200px;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
     img {
       width: 150px;
       height: 150px;
@@ -86,7 +86,7 @@ const Border = styled.a`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
     font-size: 1.5rem;
   }
 `;
