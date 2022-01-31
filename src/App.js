@@ -50,7 +50,7 @@ export const StyledRoundButton = styled.button`
 `;
 
 const AboutNFT = styled.div`
-  background-color: black;
+  /* background-color: transparent; */
   color: white;
   font-size: 1.2rem;
   width: 70%;
