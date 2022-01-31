@@ -9,7 +9,7 @@ export const Screen = styled.div`
   /* height: auto; */
   /* background: black; */
   background: url('/images/3a.png');
-  background-size: contain;
+  background-size: cover;
   width: 100vw;
   display: flex;
   justify-content: center;

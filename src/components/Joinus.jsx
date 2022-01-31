@@ -67,7 +67,7 @@ const MainDiv = styled.div`
   align-items: center;
   justify-content: flex-start;
   background: url("images/foot.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   h1 {
     color: #ffc793;
