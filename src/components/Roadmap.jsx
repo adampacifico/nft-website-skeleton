@@ -104,9 +104,10 @@ const Roadmaps = styled.div`
   align-items: center;
   /* background-color: #041c32; */
   background: url('images/bg.png');
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 30px 0 40px;
+  padding: 100px 0 50px;
 `;
 
 const Main = styled.div`

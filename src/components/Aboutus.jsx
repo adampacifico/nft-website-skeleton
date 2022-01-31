@@ -105,7 +105,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 15vh;
+  padding-top: 20vh;
   span {
     text-align: center;
     font-size: 2.5rem;

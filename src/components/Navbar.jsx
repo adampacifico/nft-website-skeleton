@@ -116,7 +116,8 @@ const Navi = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  position: fixed;
+  z-index: 100;
 
   ::after{
     position: absolute;
@@ -186,7 +187,7 @@ const Nav = styled.a`
   }
 `;
 const Banner = styled.div`
-  height: calc(100vh - 350px);
+  height: calc(100vh - 240px);
   display: flex;
   justify-content: center;
   align-items: center;
