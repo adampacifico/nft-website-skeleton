@@ -9,19 +9,19 @@ const Aboutus = () => {
   //   const [toggle, setToggle] = useState(0);
   return (
     <Container id="aboutus">
-      <div className="img_container">
+      {/* <div className="img_container">
         <img src="/images/brand/tans.png"></img>
-      </div>
+      </div> */}
       <Vismis>
         <div className="vismis">
-          <div>
+          <div  data-aos="zoom-out">
             <h4>Our Mission</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
               maiores! Praesentium, voluptatum.
             </p>
           </div>
-          <div>
+          <div  data-aos="zoom-out"> 
             <h4>Our Vision</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste
@@ -31,7 +31,7 @@ const Aboutus = () => {
         </div>
       </Vismis>
       <span>FAQ</span>
-      <Faqcontainer>
+      <Faqcontainer  data-aos="zoom-in">
         <div className="fcontainer">
           <div className="title" onClick={() => setToggle(!toggle)}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam,
@@ -98,12 +98,14 @@ const Container = styled.div`
   min-height: 100vh;
   height: auto;
   position: relative;
-  background: black;
+  background: url('images/bg1.png');
+  background-size: contain;
+  background-position: center;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 10vh;
+  padding-top: 15vh;
   span {
     text-align: center;
     font-size: 2.5rem;
@@ -111,7 +113,7 @@ const Container = styled.div`
     margin-bottom: 20px;
     color: #b8712f;
   }
-  .img_container {
+  /* .img_container {
     position: absolute;
     inset: 0;
     display: flex;
@@ -125,7 +127,7 @@ const Container = styled.div`
       min-width: 50%;
       opacity: 0.2;
     }
-  }
+  } */
 `;
 
 const Vismis = styled.div`

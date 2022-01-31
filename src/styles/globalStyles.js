@@ -7,7 +7,9 @@ export const Screen = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   /* height: auto; */
-  background: black;
+  /* background: black; */
+  background: url('/images/3a.png');
+  background-size: contain;
   width: 100vw;
   display: flex;
   justify-content: center;

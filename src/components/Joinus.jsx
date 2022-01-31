@@ -1,30 +1,63 @@
 import React from "react";
 import styled from "styled-components";
-import { FaTwitter, FaFacebookF, FaDiscord } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaDiscord,
+  FaInstagramSquare,
+  FaMediumM,
+  FaPinterestP,
+  FaTelegramPlane,
+  FaTiktok,
+} from "react-icons/fa";
 
 const Joinus = () => {
   return (
     <MainDiv id="joinus">
-      <img src="/images/brand/tans.png"></img>
       <h1>Follow Us</h1>
       <Links>
-        <Border data-aos="fade-left">
-          <FaTwitter />
-        </Border>
-        <Border data-aos="zoom-in">
-          <FaFacebookF />
-        </Border>
-        <Border data-aos="fade-right">
-          <FaDiscord />
-        </Border>
+        <div data-aos="fade-left">
+          <Border href="https://twitter.com/paroparog_nft" target="_blank">
+            <FaTwitter />
+          </Border>
+          <Border href="https://www.facebook.com/paroparoginternational" target="_blank">
+            <FaFacebookF />
+          </Border>
+          <Border href="https://discord.gg/KkWeBGgazB" target="_blank">
+            <FaDiscord />
+          </Border>
+        </div>
+        <div data-aos="zoom-in">
+          <Border href="https://www.instagram.com/paroparog_nft/" target="_blank">
+            <FaInstagramSquare />
+          </Border>
+          <Border href="https://medium.com/@paroparog_nft" target="_blank">
+            <FaMediumM />
+          </Border>
+          <Border href="https://pin.it/139nL52" target="_blank">
+            <FaPinterestP />
+          </Border>
+        </div>
+        <div data-aos="fade-right">
+          <Border href="" target="_blank">
+            <FaPinterestP />
+          </Border>
+          <Border href="https://t.me/paroparognft" target="_blank">
+            <FaTelegramPlane />
+          </Border>
+          <Border href="https://www.tiktok.com/@paroparog_nft" target="_blank">
+            <FaTiktok />
+          </Border>
+        </div>
       </Links>
-      <Footer>Copyright © Paru Paru G 2022</Footer>
+      <Footer>Copyright © Paru-Paro G 2022</Footer>
     </MainDiv>
   );
 };
 
 const MainDiv = styled.div`
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  height: 70vh;
   padding-top: 15px;
   width: 100vw;
   position: relative;
@@ -33,11 +66,17 @@ const MainDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: url("images/foot.png");
+  background-size: contain;
+  background-position: center;
   h1 {
-    color: tomato;
-    font-size: 4rem;
-    font-style: italic;
+    color: #ffc793;
+    font-size: 2rem;
     text-align: center;
+    margin-top: 40px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-style: italic;
   }
   img {
     width: 200px;
@@ -53,35 +92,49 @@ const MainDiv = styled.div`
   }
 `;
 const Footer = styled.footer`
+  color: #ffc793;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
   height: 150px;
-  background: #064663;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 1.2rem;
 `;
 const Links = styled.div`
   color: white;
   margin-top: 5%;
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  div {
+    width: auto;
+  }
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const Border = styled.a`
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 2rem;
   border: 1px white solid;
   border-radius: 50%;
-  padding: 15px;
-
+  padding: 17px 20px;
+  margin: 10px;
+  color: white;
   :hover {
     cursor: pointer;
     transform: scale(1.2) !important;
+    color: white;
   }
   @media (max-width: 768px) {
     font-size: 2.5rem;

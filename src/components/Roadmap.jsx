@@ -29,7 +29,7 @@ const Roadmap = () => {
   return (
     <Roadmaps id="roadmap">
       <Main>
-        <Left>
+        <Left data-aos="flip-right">
           <div className="img_container">
             <img src="/images/brand/tans.png"></img>
           </div>
@@ -62,7 +62,7 @@ const Roadmap = () => {
             content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
           />
         </Left>
-        <Right>
+        <Right  data-aos="flip-left">
           <div className="img_container">
             <img src="/images/brand/tans.png"></img>
           </div>
@@ -102,7 +102,9 @@ const Roadmaps = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #041c32;
+  /* background-color: #041c32; */
+  background: url('images/bg.png');
+  background-size: contain;
   color: white;
   padding: 30px 0 40px;
 `;
@@ -118,6 +120,8 @@ const Main = styled.div`
 `;
 const Left = styled.div`
   flex-basis: 50%;
+  /* background: url('/images/1b.png');
+  background-size: contain; */
   .img_container {
     img {
       width: 150px;
@@ -138,6 +142,8 @@ const Right = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  /* background: url('/images/2c.png');
+  background-size: contain; */
   .img_container {
     img {
       width: 150px;
