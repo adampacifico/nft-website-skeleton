@@ -39,8 +39,8 @@ const Joinus = () => {
           </Border>
         </div>
         <div data-aos="fade-right">
-          <Border href="" target="_blank">
-            <FaPinterestP />
+          <Border href="https://opensea.io/collection/paroparog" target="_blank">
+            <img src="/images/os2.png"></img>
           </Border>
           <Border href="https://t.me/paroparognft" target="_blank">
             <FaTelegramPlane />
@@ -131,6 +131,10 @@ const Border = styled.a`
   padding: 17px 20px;
   margin: 10px;
   color: white;
+  img{
+    width: 2rem;
+    height: 2rem;
+  }
   :hover {
     cursor: pointer;
     transform: scale(1.2) !important;
@@ -142,5 +146,6 @@ const Border = styled.a`
   @media (max-width: 426px) {
     font-size: 1.5rem;
   }
+  
 `;
 export default Joinus;
