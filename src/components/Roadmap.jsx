@@ -37,29 +37,30 @@ const Roadmap = () => {
           <Step
             num="1"
             top="none"
-            title="Lunch"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
+            title="Presale and promos"
+            content="We will be giving a bunch of dropdown price bonuses. stay tuned for more incoming promos."
           />
           <Step
             num="2"
-            title="Community Building"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
+            title="the hierarchy and networks"
+            content="We will build an organized society that leads the unity of all human races. "
           />
           <Step
             num="3"
-            title="Networks and Partnerships"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
+            title="project launch"
+            content="We will be launching in different social media platforms and the web platform for minting. "
           />
           <Step
             num="4"
             title="Events and Conferences"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
+            content="Get in touch and connect to our socials, platforms and marketplace NFT holders will have a privilage to the events and conferences."
           />
           <Step
             num="5"
             bot="none"
             title="Monetization and Funding"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat tempora unde dignissimos tenetur minima obcaecati molestias vitae corporis necessitatibus. "
+            content="They continuosly grew the communities, spread good deeds to others, and propagate populations with progressive outcomes. Giveaways and
+            bonuses are waiting.  "
           />
         </Left>
         <Right  data-aos="flip-left">
@@ -69,23 +70,26 @@ const Roadmap = () => {
           <h2>NFT element guides</h2>
           <Elements
             title="Backgrounds"
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, odit. "
+            content="forest, iceberg, maroon, mint, nature, purple, snowy, sunset, sunspark"
           />
           <Elements
             title="Breeds"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum ratione laboriosam dolore non neque."
+            content="Africa, Argentina, Brazil, Brunei, Canada, Chile, China, Denmark, Iceland, Indonesia, Israel, Italy,
+            Japan, Korea, Malaysia, Mexico, Nigeria, Norway, Philppines, Portugal, Russia, Spain, Sweden,
+            Taiwan, Texas, UAE, USA, Vietnam"
           />
           <Elements
             title="Editions"
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, odit."
+            content="cool, gold, hot, mint, purple, silver"
           />
           <Elements
             title="Established"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum ratione laboriosam dolore non neque."
+            content="2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+            2018,2019, 2020, 2021, 2022"
           />
           <Elements
             title="Souls"
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, odit."
+            content="spirit"
           />
         </Right>
       </Main>
@@ -154,7 +158,7 @@ const Right = styled.div`
   h2 {
     font-size: 1.7rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     color: #ffc793;
     text-transform: uppercase;
   }
@@ -190,6 +194,7 @@ const Content = styled.div`
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
+    text-transform: uppercase;
   }
   span {
     font-size: 0.8rem;

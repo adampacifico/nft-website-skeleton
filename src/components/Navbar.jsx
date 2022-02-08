@@ -192,6 +192,7 @@ const Banner = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 100px;
   h1 {
     font-size: 3.5rem;
     /* color: darkbrown; */
