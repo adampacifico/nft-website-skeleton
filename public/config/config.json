@@ -8,7 +8,7 @@
   },
   "NFT_NAME": "Paro Paro G International NFT",
   "SYMBOL": "PPGI",
-  "MAX_SUPPLY": 300,
+  "MAX_SUPPLY": 1000,
   "WEI_COST": 3500000000000000000,
   "DISPLAY_COST": 3.5,
   "GAS_LIMIT": 285000,
