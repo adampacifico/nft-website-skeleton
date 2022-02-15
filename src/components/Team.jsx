@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = ({ name, trans, delay, margin, src }) => (
+const Card = ({ name, trans, delay, margin, src,pos }) => (
   <div className={`cards ${margin}`} data-aos={trans} data-aos-delay={delay}>
     <img className="card-img-top" src={src} alt="Card image cap"></img>
     <div className="card-body">
-      <p className="card-text">{name}</p>
+      <h2 style={{ fontSize: "1.2rem", fontStyle: "italic"}}>{name}</h2>
+      <p className="card-text">{pos}</p>
     </div>
   </div>
 );
@@ -15,28 +16,30 @@ const Team = () => {
     <Teams id="team">
       <h1 data-aos="fade-top">Grandmasters</h1>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias non
-        explicabo doloribus rerum! Hic optio qui laborum veniam in suscipit!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-        suscipit.
+        These are the people behind this amazing project. <br />
+        <br />
+        <span style={{ fontSize: "1.7rem" }}>🚀FLY HIGH BUTTERFLY!🦋</span>
       </p>
       <Cards>
         <Card
-          name="Developer"
-          src="/images/pic.jpg"
+          name="AdamWalker"
+          pos="Developer"
+          src="/images/pic2.jpg"
           trans="zoom-in-up"
           delay="50"
         />
         <Card
-          name="Artist"
+          name="MarkMello"
+          pos="Founder"
           src="/images/pic.jpg"
           trans="zoom-in-up"
           delay="500"
           margin="margin"
         />
         <Card
-          name="Founder"
-          src="/images/pic.jpg"
+          name="KingBon"
+          pos="Consultant"
+          src="/images/pic3.jpg"
           trans="zoom-in-up"
           delay="1000"
         />
@@ -64,7 +67,7 @@ const Teams = styled.div`
     margin-bottom: 30px;
     padding: 10px;
     width: 70%;
-    margin: 1rem auto 3rem;
+    margin: 0.5rem auto 3rem;
   }
   h1 {
     font-size: 2rem;
@@ -75,7 +78,7 @@ const Teams = styled.div`
   @media (max-width: 426px) {
     height: 100%;
     padding: 30px 0;
-    p{
+    p {
       width: 90%;
     }
   }
